@@ -13,6 +13,8 @@
 
     # python 脚本文件名.py 输入文件夹路径 输出文件夹路径 --effect 效果类型 --strength 效果强度
 
+
+
     输入文件夹路径：存放原始图像的文件夹（绝对路径或相对路径均可）
     输出文件夹路径：保存处理后图像的文件夹（不存在会自动创建）
     --effect：必须指定，可选 dark（暗光）或 overexpose（过曝）
@@ -30,19 +32,11 @@
     python ConvertImage.py ./input ./output --effect overexpose --strength 0.3
     python ConvertImage.py ./GoPro/input ./GoPro_overexpose/weak03 --effect overexpose --strength 0.3
     
-应用前
-
-![src](input/GOPR0372_07_00-000047.jpg)
-
-应用后
-
-![](output/GOPR0372_07_00-000047.jpg)
-
 # 添加伽马校正
 
-    # 加入adjust_gamma(image, gamma=1.0)函数即可。
-    当 gamma < 1 时：图像变亮（增强暗部细节）
-    当 gamma > 1 时：图像变暗（增强亮部细节）
-    当 gamma = 1 时：图像保持不变（无校正）
+加入adjust_gamma(image, gamma=1.0)函数即可。
+当 gamma < 1 时：图像变亮（增强暗部细节）
+当 gamma > 1 时：图像变暗（增强亮部细节）
+当 gamma = 1 时：图像保持不变（无校正）
 
     
